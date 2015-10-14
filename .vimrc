@@ -14,6 +14,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'jeetsukumaran/vim-buffergator'
 
 call vundle#end()
 
@@ -23,6 +24,13 @@ set number
 set relativenumber
 
 let mapleader=","
+
+set tabstop=2           " 2 spaces for a tab - used when vim opens a file having <tab>s in it
+set shiftwidth=2        " 2 spaces for autoindenting
+set softtabstop=2       " 2 spaces inserted for <tab> when editing a file, also # removed by backspace
+set expandtab           " expand tabs to spaces (overloadable by file type)
+
+set clipboard=unnamed
 
 "Fugitive
 map <leader>gs :Gstatus<CR>
