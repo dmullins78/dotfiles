@@ -11,11 +11,13 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'kien/ctrlp.vim'
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 
 call vundle#end()
 
@@ -60,6 +62,24 @@ set splitright
 
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+
+set guifont=Inconsolata\ for\ Powerline:h15
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
+set laststatus=2
+set noshowmode
+set showtabline=2
+
+if has("gui_running")
+	let s:uname = system("uname")
+	if s:uname == "Darwin\n"
+		set guifont=Inconsolata\ for\ Powerline:h15
+	endif
+endif
 
 ".......Open files, directories and bookmarks....................NERDTree-o
 "go......Open selected file, but leave cursor in the NERDTree.....NERDTree-go
