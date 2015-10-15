@@ -15,6 +15,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 
