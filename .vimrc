@@ -21,8 +21,11 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'kien/ctrlp.vim'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
+Plugin 'vim-scripts/dbext.vim'
 
 call vundle#end()
+
+let g:dbext_default_profile_Otrs = 'type=PGSQL:user=dmullins:host=localhost:dbname=cljawesome' 
 
 filetype plugin indent on
 syntax on
