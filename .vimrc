@@ -12,6 +12,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-salve'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-classpath'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
@@ -20,8 +22,11 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'kien/ctrlp.vim'
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
+"Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 Plugin 'vim-scripts/dbext.vim'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'guns/vim-sexp'
+Plugin 'guns/vim-clojure-highlight'
 
 call vundle#end()
 
@@ -40,6 +45,12 @@ set softtabstop=2       " 2 spaces inserted for <tab> when editing a file, also 
 set expandtab           " expand tabs to spaces (overloadable by file type)
 
 set clipboard=unnamed
+
+"Auto Format
+map <leader>fef :Autoformat<CR>
+
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 "Fugitive
 map <leader>gs :Gstatus<CR>
@@ -86,6 +97,8 @@ if has("gui_running")
 		set guifont=Inconsolata\ for\ Powerline:h15
 	endif
 endif
+
+set clipboard=unnamed
 
 ".......Open files, directories and bookmarks....................NERDTree-o
 "go......Open selected file, but leave cursor in the NERDTree.....NERDTree-go
