@@ -30,12 +30,13 @@ Plugin 'guns/vim-clojure-highlight'
 
 call vundle#end()
 
-let g:dbext_default_profile_Otrs = 'type=PGSQL:user=dmullins:host=localhost:dbname=cljawesome' 
+let g:dbext_default_profile_LeuguemeTest = 'type=PGSQL:host=localhost:dbname=leugeme_test' 
 
 filetype plugin indent on
 syntax on
 set number
 set relativenumber
+set autoindent
 
 let mapleader=","
 
@@ -99,6 +100,23 @@ if has("gui_running")
 endif
 
 set clipboard=unnamed
+
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+
+set wildignore+=*/node_modules/*,*/bower_components,*.swp,*.zip     " MacOSX/Linux
 
 ".......Open files, directories and bookmarks....................NERDTree-o
 "go......Open selected file, but leave cursor in the NERDTree.....NERDTree-go
