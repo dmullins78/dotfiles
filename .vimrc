@@ -13,6 +13,7 @@ Plugin 'tpope/vim-salve'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -27,6 +28,9 @@ Plugin 'vim-scripts/dbext.vim'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'guns/vim-sexp'
 Plugin 'guns/vim-clojure-highlight'
+Plugin 'jceb/vim-orgmode'
+Plugin 'vim-scripts/utl.vim'
+Plugin 'suan/vim-instant-markdown'
 
 call vundle#end()
 
